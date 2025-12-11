@@ -494,7 +494,7 @@
                 
                 <!-- Proyecto 1 -->
                 <div class="project-card">
-                    <div class="img-placeholder"><i class="fas fa-film"></i></div>
+                    <div class="img-placeholder" style="background-image: url('atardecer-atardecer-llanero.jpg'); background-size: cover; background-position: center; cursor: pointer;" onclick="openLightbox('atardecer-atardecer-llanero.jpg')"></div>
                     <div class="project-content">
                         <div class="project-tags"><span class="project-tag">Audiovisual</span><span class="project-tag">Identidad</span></div>
                         <h3>Cortometraje "Misión Fruta de la Pasión"</h3>
@@ -505,7 +505,7 @@
 
                 <!-- Proyecto 2 -->
                 <div class="project-card">
-                    <div class="img-placeholder"><i class="fas fa-gamepad"></i></div>
+                    <div class="img-placeholder" style="background-image: url('CASCABEL.webp'); background-size: cover; background-position: center; cursor: pointer;" onclick="openLightbox('CASCABEL.webp')"></div>
                     <div class="project-content">
                         <div class="project-tags"><span class="project-tag">Interactivo</span><span class="project-tag">Sostenibilidad</span></div>
                         <h3>Dominion Nat-6: Juego de Estrategia</h3>
@@ -516,7 +516,7 @@
                 
                 <!-- Proyecto 3 -->
                 <div class="project-card">
-                    <div class="img-placeholder"><i class="fas fa-sitemap"></i></div>
+                    <div class="img-placeholder" style="background-image: url('avion llanero.png'); background-size: cover; background-position: center; cursor: pointer;" onclick="openLightbox('avion llanero.png')"></div>
                     <div class="project-content">
                         <div class="project-tags"><span class="project-tag">Interactivo</span><span class="project-tag">Liderazgo</span></div>
                         <h3>Simulador Interactivo de Teopolítica</h3>
@@ -527,7 +527,7 @@
 
                 <!-- Proyecto 4 -->
                 <div class="project-card">
-                    <div class="img-placeholder"><i class="fas fa-microphone-alt"></i></div>
+                    <div class="img-placeholder" style="background-image: url('beautiful-horse.webp'); background-size: cover; background-position: center; cursor: pointer;" onclick="openLightbox('beautiful-horse.webp')"></div>
                     <div class="project-content">
                         <div class="project-tags"><span class="project-tag">Poesía</span><span class="project-tag">Performance</span></div>
                         <h3>Poemarios Audiovisuales: "Sembrador de Versos"</h3>
@@ -538,7 +538,7 @@
                 
                 <!-- Proyecto 5 -->
                 <div class="project-card">
-                    <div class="img-placeholder"><i class="fas fa-cogs"></i></div>
+                    <div class="img-placeholder" style="background-image: url('freepik__view-from-inside-an-airplane-cockpit-looking-out-o__876.png'); background-size: cover; background-position: center; cursor: pointer;" onclick="openLightbox('freepik__view-from-inside-an-airplane-cockpit-looking-out-o__876.png')"></div>
                     <div class="project-content">
                         <div class="project-tags"><span class="project-tag">Software</span><span class="project-tag">Gestión</span></div>
                         <h3>REA Productions: Gestión de Proyectos Audiovisuales</h3>
@@ -549,7 +549,7 @@
                 
                 <!-- Proyecto 6 -->
                  <div class="project-card">
-                    <div class="img-placeholder"><i class="fas fa-palette"></i></div>
+                    <div class="img-placeholder" style="background-image: url('llano aereo.png'); background-size: cover; background-position: center; cursor: pointer;" onclick="openLightbox('llano aereo.png')"></div>
                     <div class="project-content">
                         <div class="project-tags"><span class="project-tag">Diseño</span><span class="project-tag">Cultura</span></div>
                         <h3>Diseño de Galería Cultural "Casa C"</h3>
@@ -692,14 +692,11 @@
         const lightboxImg = document.getElementById('lightbox-img');
         const lightboxClose = document.querySelector('.lightbox-close');
         
-        // Agregar evento click a imágenes del proyecto (cuando las agregues)
-        document.querySelectorAll('.img-placeholder').forEach(img => {
-            img.style.cursor = 'pointer';
-            img.addEventListener('click', function() {
-                // Cuando tengas imágenes reales, esto las mostrará en grande
-                lightbox.classList.add('active');
-            });
-        });
+        // Función para abrir lightbox con imagen específica
+        function openLightbox(imgSrc) {
+            lightboxImg.src = imgSrc;
+            lightbox.classList.add('active');
+        }
         
         // Cerrar lightbox
         lightboxClose.addEventListener('click', () => {
