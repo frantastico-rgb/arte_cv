@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francisco - Portafolio Artístico & Cultural</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6a5acd; /* SlateBlue */
+            --secondary-color: #2c3e50; /* SlateGray */
+            --background-color: #f4f4f9;
+            --text-color: #333;
+            --card-bg: white;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .profile-img-container {
+            margin: 0 auto 25px auto;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .header .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header .title {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section {
+            background: var(--card-bg);
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .manifesto-text {
+            font-size: 1.1rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            font-style: italic;
+            color: #555;
+        }
+
+        .areas-practica {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .area-card {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .area-card h3 {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .area-card ul {
+            list-style-type: none;
+        }
+
+        .area-card li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .area-card li::before {
+            content: '✓';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+        }
+
+        .project-card .img-placeholder {
+            height: 200px;
+            background: linear-gradient(135deg, #ddd, #e5e5e5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-weight: 500;
+            /* Reemplaza este fondo con una imagen del proyecto */
+        }
+        
+        .project-card .img-placeholder i {
+            font-size: 40px;
+        }
+
+        .project-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .project-tags {
+            margin-bottom: 15px;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .project-description {
+            font-size: 0.95rem;
+            color: #666;
+            flex-grow: 1;
+            margin-bottom: 20px;
+        }
+        
+        .project-link {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            align-self: flex-start;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 20px;
+            color: #777;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="profile-img-container">
+                <img src="foto-perfil.jpg" alt="Foto de perfil de Francisco" class="profile-img">
+            </div>
+            <h1 class="name">Francisco</h1>
+            <p class="title">Gestor Cultural | Artista Transdisciplinar | Promotor de Identidad</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>frantastico_rgb@proton.me</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp Profesional</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Villavicencio, Meta - Colombia</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">Filosofía de Trabajo</h2>
+            <p class="manifesto-text">
+                "Concibo mi práctica como un puente entre mundos: la tecnología y el territorio, el código y el relato, la estrategia y la poesía. Utilizo herramientas digitales e interactivas no como un fin, sino como un medio para explorar, fortalecer y difundir la identidad cultural. Cada proyecto es una investigación, una conversación con la comunidad y una búsqueda de nuevas narrativas que nos permitan comprender quiénes somos y cómo habitamos nuestro entorno."
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="project-gallery">
+                
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <div class="img-placeholder"><i class="fas fa-film"></i></div>
+                    <div class="project-content">
+                        <div class="project-tags"><span class="project-tag">Audiovisual</span><span class="project-tag">Identidad</span></div>
+                        <h3>Cortometraje "Misión Fruta de la Pasión"</h3>
+                        <p class="project-description">Exploración cinematográfica que resignifica la pasiflora como símbolo de la resiliencia y cultura de los Llanos Orientales.</p>
+                        <a href="https://youtu.be/XecYQlJ4GvY" target="_blank" class="project-link">Ver Microfilm <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <div class="img-placeholder"><i class="fas fa-gamepad"></i></div>
+                    <div class="project-content">
+                        <div class="project-tags"><span class="project-tag">Interactivo</span><span class="project-tag">Sostenibilidad</span></div>
+                        <h3>Dominion Nat-6: Juego de Estrategia</h3>
+                        <p class="project-description">Aplicación web interactiva que gamifica conceptos de sostenibilidad y equilibrio medioambiental a través de la estrategia.</p>
+                        <a href="https://dominion-nat-6.vercel.app/" target="_blank" class="project-link">Jugar Demo <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <div class="img-placeholder"><i class="fas fa-sitemap"></i></div>
+                    <div class="project-content">
+                        <div class="project-tags"><span class="project-tag">Interactivo</span><span class="project-tag">Liderazgo</span></div>
+                        <h3>Simulador Interactivo de Teopolítica</h3>
+                        <p class="project-description">Herramienta didáctica con métricas para explorar modelos de liderazgo y pensamiento estratégico en contextos complejos.</p>
+                        <a href="https://teopolitica.vercel.app/" target="_blank" class="project-link">Explorar Simulador <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 4 -->
+                <div class="project-card">
+                    <div class="img-placeholder"><i class="fas fa-microphone-alt"></i></div>
+                    <div class="project-content">
+                        <div class="project-tags"><span class="project-tag">Poesía</span><span class="project-tag">Performance</span></div>
+                        <h3>Poemarios Audiovisuales: "Sembrador de Versos"</h3>
+                        <p class="project-description">Serie de videos que fusionan la declamación poética con el paisaje sonoro y visual, explorando el poder de la palabra.</p>
+                        <a href="https://youtu.be/rY0ltmnbqfQ" target="_blank" class="project-link">Ver Poema <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 5 -->
+                <div class="project-card">
+                    <div class="img-placeholder"><i class="fas fa-cogs"></i></div>
+                    <div class="project-content">
+                        <div class="project-tags"><span class="project-tag">Software</span><span class="project-tag">Gestión</span></div>
+                        <h3>REA Productions: Gestión de Proyectos Audiovisuales</h3>
+                        <p class="project-description">Plataforma de software diseñada para la administración y seguimiento de proyectos en el sector de la producción audiovisual.</p>
+                        <a href="https://frantastico-rgb.github.io/rea_productions/" target="_blank" class="project-link">Ver Plataforma <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 6 -->
+                 <div class="project-card">
+                    <div class="img-placeholder"><i class="fas fa-palette"></i></div>
+                    <div class="project-content">
+                        <div class="project-tags"><span class="project-tag">Diseño</span><span class="project-tag">Cultura</span></div>
+                        <h3>Diseño de Galería Cultural "Casa C"</h3>
+                        <p class="project-description">Propuesta conceptual en video para el diseño de un espacio cultural, integrando arte, comunidad y arquitectura.</p>
+                        <a href="https://youtu.be/41LdJENdoEA" target="_blank" class="project-link">Ver Video <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 7 -->
+                <div class="project-card">
+                    <div class="img-placeholder"><i class="fas fa-book-open"></i></div>
+                    <div class="project-content">
+                        <div class="project-tags"><span class="project-tag">Literatura</span><span class="project-tag">Reflexión</span></div>
+                        <h3>Fábulas y Reflexiones Filosóficas</h3>
+                        <p class="project-description">Colección de videos y escritos, como el libro "Notas de Sol" y fábulas animadas, que exploran temas de identidad, economía y superación.</p>
+                        <a href="https://youtu.be/vy6e8NIR_nc" target="_blank" class="project-link">Ver Fábula "San Martillo" <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 8 -->
+                <div class="project-card">
+                    <div class="img-placeholder"><i class="fas fa-leaf"></i></div>
+                    <div class="project-content">
+                        <div class="project-tags"><span class="project-tag">Juego</span><span class="project-tag">Educativo</span></div>
+                        <h3>ISLA FLOR: Sostenibilidad y Medio Ambiente</h3>
+                        <p class="project-description">Introducción a un juego de estrategia enfocado en enseñar principios de sostenibilidad y cuidado del medio ambiente de forma lúdica.</p>
+                        <a href="https://youtu.be/FZj0FZoZzNU" target="_blank" class="project-link">Ver Introducción <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Áreas de Práctica</h2>
+            <div class="areas-practica">
+                <div class="area-card">
+                    <h3><i class="fas fa-sitemap"></i> Gestión Cultural y Producción</h3>
+                    <ul>
+                        <li>Formulación y evaluación de proyectos culturales.</li>
+                        <li>Procuración de fondos (Fundraising).</li>
+                        <li>Producción ejecutiva audiovisual y de eventos.</li>
+                        <li>Vinculación comunitaria y desarrollo de audiencias.</li>
+                        <li>Consultoría en creatividad e innovación.</li>
+                    </ul>
+                </div>
+                <div class="area-card">
+                    <h3><i class="fas fa-paint-brush"></i> Creación Artística y Conceptual</h3>
+                    <ul>
+                        <li>Guionismo y dirección para cine y nuevos medios.</li>
+                        <li>Arte interactivo y desarrollo de software creativo.</li>
+                        <li>Poesía, performance y narrativa transmedia.</li>
+                        <li>Investigación-Creación y trabajo de archivo.</li>
+                        <li>Diseño de experiencias y mundos narrativos.</li>
+                    </ul>
+                </div>
+                <div class="area-card">
+                    <h3><i class="fas fa-broadcast-tower"></i> Estrategia y Tecnología</h3>
+                    <ul>
+                        <li>Desarrollo de software (React, Node.js, Python).</li>
+                        <li>Análisis de datos para proyectos culturales.</li>
+                        <li>Agricultura de Precisión y BioTech (Contexto creativo).</li>
+                        <li>Comunicación estratégica y marketing digital.</li>
+                        <li>Diseño de talleres y metodologías pedagógicas.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Formación Relevante</h2>
+             <div class="areas-practica"> <!-- Reutilizo esta clase para el layout -->
+                <div class="area-card">
+                    <h3>Tecnólogo en Análisis y Desarrollo de Software</h3>
+                    <p><strong>SENA</strong> (Desarrollador Software)</p>
+                    <p>Enfoque en soluciones tecnológicas empresariales y creativas.</p>
+                </div>
+                <div class="area-card">
+                    <h3>Tecnólogo en Agricultura de Precisión</h3>
+                    <p><strong>SENA Villavicencio</strong> (Graduado 2022)</p>
+                    <p>Ponente en Redcolsi (2021). Tecnología en Recuperación del Suelo con agricultura integral orgánica.</p>
+                </div>
+                 <div class="area-card">
+                    <h3>Creatividad Aplicada - Seminario Internacional</h3>
+                    <p><strong>Universidad de Santiago de Compostela</strong></p>
+                    <p>Metodologías avanzadas de innovación y pensamiento creativo.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Este portafolio es un organismo vivo, en constante creación y transformación.</p>
+            <p>&copy; 2024 - Francisco | Villavicencio, Colombia</p>
+        </footer>
+
+    </div>
+</body>
+</html>
