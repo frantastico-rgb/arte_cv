@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francisco - Artista Transdisciplinar | Gestión Cultural & Tecnología Creativa</title>
+    
+    <!-- Meta Tags SEO -->
+    <meta name="description" content="Francisco - Gestor Cultural y Artista Transdisciplinar de Villavicencio. Proyectos audiovisuales, arte interactivo, software creativo y gestión cultural con identidad llanera.">
+    <meta name="keywords" content="gestor cultural, artista digital, Colombia, Villavicencio, arte interactivo, producción audiovisual, software creativo, identidad cultural">
+    <meta name="author" content="Francisco">
+    
+    <!-- Open Graph para Redes Sociales -->
+    <meta property="og:title" content="Francisco - Artista Transdisciplinar & Gestor Cultural">
+    <meta property="og:description" content="Explora proyectos que fusionan arte, tecnología y territorio. Cortometrajes, juegos interactivos, poesía y gestión cultural desde los Llanos Orientales.">
+    <meta property="og:image" content="https://tu-dominio.com/foto-perfil.jpg">
+    <meta property="og:url" content="https://tu-dominio.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Francisco - Artista Transdisciplinar">
+    <meta name="twitter:description" content="Arte, tecnología y gestión cultural desde Villavicencio, Colombia">
+    <meta name="twitter:image" content="https://tu-dominio.com/foto-perfil.jpg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Paleta Artística Mejorada - Inspirada en tierra llanera y creatividad */
+            --primary-color: #d4525c; /* Terracota/Arcilla rojiza */
+            --secondary-color: #2d5449; /* Verde bosque profundo */
+            --accent-color: #f4a261; /* Naranja cálido/atardecer */
+            --background-color: #faf8f3; /* Crema papel antiguo */
+            --text-color: #2b2d2e;
+            --card-bg: #ffffff;
+            --shadow-soft: rgba(212, 82, 92, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #c94b5a 10%, #7a3d4d 30%, #4a5a8a 75%);
+            background-size: 150% 150%;
+            animation: gradientShift 8s ease infinite;
+            color: white;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            position: relative;
+            box-shadow: 0 20px 60px var(--shadow-soft);
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,50 Q300,0 600,50 T1200,50 L1200,0 L0,0 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .profile-img-container {
+            margin: 0 auto 25px auto;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3), 0 0 0 12px rgba(255,255,255,0.1);
+            position: relative;
+            z-index: 2;
+            transition: transform 0.4s ease;
+        }
+        
+        .profile-img-container:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .header .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.8rem;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+            letter-spacing: 2px;
+        }
+
+        .header .title {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 14px 40px;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .cta-button:hover {
+            background: #e89451;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section {
+            background: var(--card-bg);
+            padding: 50px 40px;
+            margin-bottom: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px var(--shadow-soft);
+            border: 1px solid rgba(212, 82, 92, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px var(--shadow-soft);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .manifesto-text {
+            font-size: 1.1rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            font-style: italic;
+            color: #555;
+        }
+
+        .areas-practica {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .area-card {
+            background-color: #fdfcfa;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .area-card:hover {
+            background-color: #fff;
+            border-left-width: 8px;
+            transform: translateX(5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .area-card h3 {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .area-card ul {
+            list-style-type: none;
+        }
+
+        .area-card li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .area-card li::before {
+            content: '✓';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+        }
+
+        .project-card .img-placeholder {
+            height: 200px;
+            background: linear-gradient(135deg, #ddd, #e5e5e5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-weight: 500;
+            /* Reemplaza este fondo con una imagen del proyecto */
+        }
+        
+        .project-card .img-placeholder i {
+            font-size: 40px;
+        }
+
+        .project-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .project-tags {
+            margin-bottom: 15px;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .project-description {
+            font-size: 0.95rem;
+            color: #666;
+            flex-grow: 1;
+            margin-bottom: 20px;
+        }
+        
+        .project-link {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            align-self: flex-start;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Sección de Contacto Robusta */
+        .contact-section {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            padding: 60px 40px;
+            border-radius: 20px;
+            color: white;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-section p {
+            font-size: 1.1rem;
+            margin-bottom: 35px;
+            opacity: 0.9;
+        }
+        
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .contact-method {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px 35px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .contact-method:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .contact-method i {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 12px;
+        }
+        
+        .contact-method a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        
+        .contact-method span {
+            display: block;
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+        
+        /* Lightbox Básico */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+        
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 8px;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .lightbox-close:hover {
+            color: var(--accent-color);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 20px;
+            color: #777;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="profile-img-container">
+                <img src="foto-perfil.jpg" alt="Foto de perfil de Francisco" class="profile-img">
+            </div>
+            <h1 class="name">Francisco</h1>
+            <p class="title">Gestor Cultural | Artista Transdisciplinar | Promotor de Identidad</p>
+            <a href="#contacto" class="cta-button">✨ Trabajemos Juntos</a>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>frantastico_rgb@proton.me</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp Profesional</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Villavicencio, Meta - Colombia</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">Filosofía de Trabajo</h2>
+            <p class="manifesto-text">
+                "Concibo mi práctica como un puente entre mundos: la tecnología y el territorio, el código y el relato, la estrategia y la poesía. Utilizo herramientas digitales e interactivas no como un fin, sino como un medio para explorar, fortalecer y difundir la identidad cultural. Cada proyecto es una investigación, una conversación con la comunidad y una búsqueda de nuevas narrativas que nos permitan comprender quiénes somos y cómo habitamos nuestro entorno."
+            </p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="project-gallery">
+                
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <div class="img-placeholder"><i class="fas fa-film"></i></div>
+                    <div class="project-content">
+                        <div class="project-tags"><span class="project-tag">Audiovisual</span><span class="project-tag">Identidad</span></div>
+                        <h3>Cortometraje "Misión Fruta de la Pasión"</h3>
+                        <p class="project-description">Exploración cinematográfica que resignifica la pasiflora como símbolo de la resiliencia y cultura de los Llanos Orientales.</p>
+                        <a href="https://youtu.be/XecYQlJ4GvY" target="_blank" class="project-link">Ver Microfilm <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <div class="img-placeholder"><i class="fas fa-gamepad"></i></div>
+                    <div class="project-content">
+                        <div class="project-tags"><span class="project-tag">Interactivo</span><span class="project-tag">Sostenibilidad</span></div>
+                        <h3>Dominion Nat-6: Juego de Estrategia</h3>
+                        <p class="project-description">Aplicación web interactiva que gamifica conceptos de sostenibilidad y equilibrio medioambiental a través de la estrategia.</p>
+                        <a href="https://dominion-nat-6.vercel.app/" target="_blank" class="project-link">Jugar Demo <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <div class="img-placeholder"><i class="fas fa-sitemap"></i></div>
+                    <div class="project-content">
+                        <div class="project-tags"><span class="project-tag">Interactivo</span><span class="project-tag">Liderazgo</span></div>
+                        <h3>Simulador Interactivo de Teopolítica</h3>
+                        <p class="project-description">Herramienta didáctica con métricas para explorar modelos de liderazgo y pensamiento estratégico en contextos complejos.</p>
+                        <a href="https://teopolitica.vercel.app/" target="_blank" class="project-link">Explorar Simulador <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 4 -->
+                <div class="project-card">
+                    <div class="img-placeholder"><i class="fas fa-microphone-alt"></i></div>
+                    <div class="project-content">
+                        <div class="project-tags"><span class="project-tag">Poesía</span><span class="project-tag">Performance</span></div>
+                        <h3>Poemarios Audiovisuales: "Sembrador de Versos"</h3>
+                        <p class="project-description">Serie de videos que fusionan la declamación poética con el paisaje sonoro y visual, explorando el poder de la palabra.</p>
+                        <a href="https://youtu.be/rY0ltmnbqfQ" target="_blank" class="project-link">Ver Poema <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 5 -->
+                <div class="project-card">
+                    <div class="img-placeholder"><i class="fas fa-cogs"></i></div>
+                    <div class="project-content">
+                        <div class="project-tags"><span class="project-tag">Software</span><span class="project-tag">Gestión</span></div>
+                        <h3>REA Productions: Gestión de Proyectos Audiovisuales</h3>
+                        <p class="project-description">Plataforma de software diseñada para la administración y seguimiento de proyectos en el sector de la producción audiovisual.</p>
+                        <a href="https://frantastico-rgb.github.io/rea_productions/" target="_blank" class="project-link">Ver Plataforma <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 6 -->
+                 <div class="project-card">
+                    <div class="img-placeholder"><i class="fas fa-palette"></i></div>
+                    <div class="project-content">
+                        <div class="project-tags"><span class="project-tag">Diseño</span><span class="project-tag">Cultura</span></div>
+                        <h3>Diseño de Galería Cultural "Casa C"</h3>
+                        <p class="project-description">Propuesta conceptual en video para el diseño de un espacio cultural, integrando arte, comunidad y arquitectura.</p>
+                        <a href="https://youtu.be/41LdJENdoEA" target="_blank" class="project-link">Ver Video <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 7 -->
+                <div class="project-card">
+                    <div class="img-placeholder"><i class="fas fa-book-open"></i></div>
+                    <div class="project-content">
+                        <div class="project-tags"><span class="project-tag">Literatura</span><span class="project-tag">Reflexión</span></div>
+                        <h3>Fábulas y Reflexiones Filosóficas</h3>
+                        <p class="project-description">Colección de videos y escritos, como el libro "Notas de Sol" y fábulas animadas, que exploran temas de identidad, economía y superación.</p>
+                        <a href="https://youtu.be/vy6e8NIR_nc" target="_blank" class="project-link">Ver Fábula "San Martillo" <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 8 -->
+                <div class="project-card">
+                    <div class="img-placeholder"><i class="fas fa-leaf"></i></div>
+                    <div class="project-content">
+                        <div class="project-tags"><span class="project-tag">Juego</span><span class="project-tag">Educativo</span></div>
+                        <h3>ISLA FLOR: Sostenibilidad y Medio Ambiente</h3>
+                        <p class="project-description">Introducción a un juego de estrategia enfocado en enseñar principios de sostenibilidad y cuidado del medio ambiente de forma lúdica.</p>
+                        <a href="https://youtu.be/FZj0FZoZzNU" target="_blank" class="project-link">Ver Introducción <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Áreas de Práctica</h2>
+            <div class="areas-practica">
+                <div class="area-card">
+                    <h3><i class="fas fa-sitemap"></i> Gestión Cultural y Producción</h3>
+                    <ul>
+                        <li>Formulación y evaluación de proyectos culturales.</li>
+                        <li>Procuración de fondos (Fundraising).</li>
+                        <li>Producción ejecutiva audiovisual y de eventos.</li>
+                        <li>Vinculación comunitaria y desarrollo de audiencias.</li>
+                        <li>Consultoría en creatividad e innovación.</li>
+                    </ul>
+                </div>
+                <div class="area-card">
+                    <h3><i class="fas fa-paint-brush"></i> Creación Artística y Conceptual</h3>
+                    <ul>
+                        <li>Guionismo y dirección para cine y nuevos medios.</li>
+                        <li>Arte interactivo y desarrollo de software creativo.</li>
+                        <li>Poesía, performance y narrativa transmedia.</li>
+                        <li>Investigación-Creación y trabajo de archivo.</li>
+                        <li>Diseño de experiencias y mundos narrativos.</li>
+                    </ul>
+                </div>
+                <div class="area-card">
+                    <h3><i class="fas fa-broadcast-tower"></i> Estrategia y Tecnología</h3>
+                    <ul>
+                        <li>Desarrollo de software (React, Node.js, Python).</li>
+                        <li>Análisis de datos para proyectos culturales.</li>
+                        <li>Agricultura de Precisión y BioTech (Contexto creativo).</li>
+                        <li>Comunicación estratégica y marketing digital.</li>
+                        <li>Diseño de talleres y metodologías pedagógicas.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Formación Relevante</h2>
+             <div class="areas-practica"> <!-- Reutilizo esta clase para el layout -->
+                <div class="area-card">
+                    <h3>Tecnólogo en Análisis y Desarrollo de Software</h3>
+                    <p><strong>SENA</strong> (Desarrollador Software)</p>
+                    <p>Enfoque en soluciones tecnológicas empresariales y creativas.</p>
+                </div>
+                <div class="area-card">
+                    <h3>Tecnólogo en Agricultura de Precisión</h3>
+                    <p><strong>SENA Villavicencio</strong> (Graduado 2022)</p>
+                    <p>Ponente en Redcolsi (2021). Tecnología en Recuperación del Suelo con agricultura integral orgánica.</p>
+                </div>
+                 <div class="area-card">
+                    <h3>Creatividad Aplicada - Seminario Internacional</h3>
+                    <p><strong>Universidad de Santiago de Compostela</strong></p>
+                    <p>Metodologías avanzadas de innovación y pensamiento creativo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto Robusta -->
+        <section id="contacto" class="contact-section">
+            <h2>Hablemos de tu Proyecto</h2>
+            <p>¿Tienes una idea cultural, un proyecto audiovisual o necesitas consultoría creativa?<br>Estoy disponible para colaboraciones, alianzas y nuevos retos.</p>
+            
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:frantastico_rgb@proton.me">frantastico_rgb@proton.me</a>
+                    <span>Respuesta en 24-48h</span>
+                </div>
+                
+                <div class="contact-method">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/573XXXXXXXXX" target="_blank">WhatsApp Profesional</a>
+                    <span>Lun-Vie 9am-6pm</span>
+                </div>
+                
+                <div class="contact-method">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://linkedin.com/in/tu-perfil" target="_blank">LinkedIn</a>
+                    <span>Red profesional</span>
+                </div>
+            </div>
+            
+            <p style="font-size: 0.95rem; margin-top: 20px; opacity: 0.8;">
+                📍 Villavicencio, Meta - Colombia | Disponible para proyectos remotos y presenciales
+            </p>
+        </section>
+
+        <footer class="footer">
+            <p>Este portafolio es un organismo vivo, en constante creación y transformación.</p>
+            <p>&copy; 2025 - Francisco | Villavicencio, Colombia</p>
+        </footer>
+
+    </div>
+    
+    <!-- Lightbox Structure -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Imagen ampliada">
+        </div>
+    </div>
+    
+    <!-- JavaScript para Lightbox y Smooth Scroll -->
+    <script>
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        
+        // Agregar evento click a imágenes del proyecto (cuando las agregues)
+        document.querySelectorAll('.img-placeholder').forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', function() {
+                // Cuando tengas imágenes reales, esto las mostrará en grande
+                lightbox.classList.add('active');
+            });
+        });
+        
+        // Cerrar lightbox
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+        
+        // Cerrar con ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                lightbox.classList.remove('active');
+            }
+        });
+        
+        // Smooth scroll para el botón CTA
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#contacto').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        });
+    </script>
+</body>
+</html>
